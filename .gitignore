@@ -1,4 +1,12 @@
 .idea/
 import/
 data/
+/data/
 venv*
+!/data/group/.gitkeep
+!/data/individual/.gitkeep
+!/import/messenger/.gitkeep
+__pycache__/*
+aboutus/__pycache__/*
+aboutus/messenger/__pycache__/*
+aboutus/commands/__pycache__/*
