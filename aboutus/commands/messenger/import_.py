@@ -1,1 +1,2 @@
-# Apparently you can suffix with an underscore if the variables are a bit naff
+# Apparently you can suffix with an underscore to use variables that would otherwise be taken
+# Kind of nasty but also kind of genius
