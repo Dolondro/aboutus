@@ -10,3 +10,4 @@ __pycache__/*
 aboutus/__pycache__/*
 aboutus/messenger/__pycache__/*
 aboutus/commands/__pycache__/*
+aboutus/conversation/__pycache__/*

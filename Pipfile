@@ -9,6 +9,7 @@ name = "pypi"
 
 "bs4" = "*"
 click = "*"
+dateparser = "*"
 
 
 [dev-packages]

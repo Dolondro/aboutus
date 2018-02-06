@@ -23,6 +23,46 @@ I'm looking at you anything called test.py...
 ### Imports are done beautifully
 
 `from foo import blah as foo_bar`. If I can remember how to write it, that's such a nice syntax. It's actually the right order! *sniffs*
+
+### Getters and Setters are evil
+
+Source: https://www.python-course.eu/python3_properties.php
+
+Basic jist, you access things as public objects, if you want to change the public interface later / add validation, it can be done
+by changing your property definition to be a bit magical
+
+```python
+class P:
+
+    def __init__(self,x):
+        self.__set_x(x)
+
+    def __get_x(self):
+        return self.__x
+
+    def __set_x(self, x):
+        if x < 0:
+            self.__x = 0
+        elif x > 1000:
+            self.__x = 1000
+        else:
+            self.__x = x
+
+    x = property(__get_x, __set_x)
+```
+
+Normally I'm against magic, but this is *kind* of neat. Plus, my main problem with magic is localised magic. This is infinitely better
+than hacking with magic methods in PHP or the magic of RoR
+
+### The ternary operator is a bit... =/
+
+```python
+bar = "foo" if 10 > 5 else "baz"
+```
+
+I can see what they were aiming for, I'm still not sure I agree. The flow is a bit unwieldy to read. I'll consider it
+best practice to ignore it for the time being and see if I can get someone to code review this and disagree/agree
+
 ### Folders are evil...
 
 Well, not evil. But the namespace folder upon folder upon folder stuff of PHP/JS seems to not be in vogue.
